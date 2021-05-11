@@ -1,7 +1,7 @@
 # DApp
 | An electronic check management system based on blockchain and smart contract |
 
-WHY THIS SYSTEM?
+WHY THIS SYSTEM?\n
 This project introduces an electronic check management system that is based on blockchain and smart contract. but first let's explain why do we need such a system?
 you know well about usage of checks in financial businesses. currently most of check exchanges are based on paper; when you issue a check, you write the specifications of the check and give it to someone. as a reciever of a check, if you lose paper of check, there is no way to take your money back. so it is abvious that this physical exchange of checks have some major issues. as a solution, an electronic check system has beeen proposed. in this manner, your issued/recieved check information are stored in banks' databases. but these electronic systems have some other issues; they're CENTRALIZED. financial exchanges are so cruical, it's about MONEY so it is important to find more secure and reliable solutions. but what are issues of centralized systems?
 in centralized systems, if the centralized component goes down, the whole system goes down. in a check system, if the centralized component (for example storage) got in trouble, all checks information would be lost. as a solution, a DISTRIBUTED check system can be proposed.
