@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    div.header {
+      background-color: rgb(247, 247, 247);
+      margin-top:5px;
+      padding: 5px 5px;
+      opacity: 80%;
+    }
+    .grid-container1 {
+      width: 350px;
+      margin-left: 10px; 
+      display: grid;
+      grid-template-columns: 100px 450px;
+      grid-gap: 5px;
+    }
+
+  .grid-container1 > div {
+      padding: 6px 0;
+      font-size: 15px;
+      opacity: 70%;
+      color: black;
+      font-size:13px;
+  }
+
+  .grid1-item1 {
+
+  }
+
+  .grid1-item2 {
+
+  }
+
+  .grid-container {
+    width: 350px;
+    margin-left: 305px; 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2px;
+  }
+
+ .grid-container > div {
+    background-color: rgb(0, 77, 128);
+    text-align: center;
+    padding: 6px 0;
+    font-size: 15px;
+    opacity: 70%;
+    border: 1px solid #BFBFBF;
+    color: white;
+}
+.grid3Item1 {
+  background-color: #31708f;
+  border: 3px solid #31708f;
+}
+.grid3Item2 {
+  grid-area: 1 / 2 / 1 / span 2;
+  background-color: #31708f;
+  border: 3px solid #31708f;
+}
+.grid-container3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-container3 > div {
+  padding: 3px 0;
+}
+
+.backgroundStyle {
+  background: url(/5.jpg);
+  background-repeat: repeat;
+  background-size: auto;
+}
+.headerText {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  text-align:center;
+}
+
+.grid-container4 {
+  display: grid;
+  grid-template-columns: 300px 965px;
+  grid-gap: 5px;
+}
+
+.grid4-item1 {
+  background-color: rgb(247, 247, 247);
+  margin-top:5px;
+  padding: 5px 5px;
+  opacity: 80%;
+}
+
+.grid4-item2 {
+  background-color: #31708f;
+  border: 3px solid #31708f;
+  margin-top:5px;
+  padding: 5px 5px;
+  opacity: 80%;
+}
+
+.grid-container5 {
+  display: grid;
+  grid-template-columns: 50px 300px;
+  align-content: center;
+}
+
+.grid5-item1 {
+  
+}
+
+.grid5-item2 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  text-align:center;
+}
+
+.grid-container6 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+.grid-container7 {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: auto 1px auto;
+  background-color: #31708f;
+  border: 3px solid #31708f;
+}
+
+.grid-container8 {
+  display:grid; 
+  grid-area:1 / 1 / span 2 / span 2;
+  grid-template-columns: auto auto;
+  background-color: rgb(0, 77, 128);
+  border: 3px solid rgb(0, 77, 128);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 3px;
+}
+  </style>
+  <script>
+    function showChequesSection() {
+      document.getElementById('chequebooksSection').style.display = 'none';
+      document.getElementById('chequesSection').style.display = 'block';
+      document.getElementById('issueSection').style.display = 'none';
+      document.getElementById('yourChequebooks').style.opacity = '70%';
+      document.getElementById('yourCheques').style.opacity = '100%';
+      document.getElementById('issueCheque').style.opacity = '70%';
+    }
+    function showChequebooksSection() {
+      document.getElementById('chequebooksSection').style.display = 'block';
+      document.getElementById('chequesSection').style.display = 'none';
+      document.getElementById('issueSection').style.display = 'none';
+      document.getElementById('yourChequebooks').style.opacity = '100%';
+      document.getElementById('yourCheques').style.opacity = '70%';
+      document.getElementById('issueCheque').style.opacity = '70%';
+    }
+    function showIssueSection() {
+      document.getElementById('chequebooksSection').style.display = 'none';
+      document.getElementById('chequesSection').style.display = 'none';
+      document.getElementById('issueSection').style.display = 'grid';
+      document.getElementById('yourChequebooks').style.opacity = '70%';
+      document.getElementById('yourCheques').style.opacity = '70%';
+      document.getElementById('issueCheque').style.opacity = '100%';
+    }
+  </script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Electronic Cheque System</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="backgroundStyle">
+    <div class="container" style="width:1300px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="header">
+          <div class="grid-container5" style="background-color:#31708f; height: 120px; padding:10px; border: 3px solid #31708f; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div>
+              <img class="grid5-item1" src="e-logo.png">
+            </div>
+            <div>  
+              <h1 class="grid5-item2" style="font-family:georgia">-Cheque System</h1>
+            </div>
+          </div>
+          <div class="grid-container1">
+            <div>
+              <img src="/profile-logo.png">
+            </div>
+            <div style="margin-top:15px">
+              <p id="account" style="font-family:arial"><strong></strong></p>
+              <p id="balance" style="font-family:arial"><strong></strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container4" style="height:900px;">
+          <div class="grid4-item2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div id="warning" class="grid-container6">
+              <div class="grid-container8">
+                <div>
+                  <input id="deposit_value" type="text" value="Amount" style="margin-top: 3px; margin-left:2px" onClick="var dep = document.getElementById('deposit_value'); if(dep.value == 'Amount') dep.value = null;"></input>
+                </div>
+                <div>
+                  <button class="btn btn-primary" type="submit" style="width: 84px" onClick="App.deposit(); return false;">Deposit</button>
+                </div>
+                <div style="margin-top: 10px">
+                  <input id="withdrawal_value" type="text" value="Amount" style="margin-top: 3px; margin-left:2px" onClick="var wit = document.getElementById('withdrawal_value'); if(wit.value == 'Amount') wit.value = null;"></input>
+                </div>
+                <div>
+                  <button class="btn btn-primary" style="margin-top: 10px" type="submit" onClick="App.withdraw(); return false;">Withdraw</button>
+                </div>
+                <div>
+                  <input id="call_value" type="text" value="Cheque ID" style="margin-top: 14px; margin-left:2px" onClick="var call = document.getElementById('call_value'); if(call.value == 'Cheque ID') call.value = null;"></input>
+                </div>
+                <div>
+                  <button class="btn btn-primary" type="submit" style="width: 84px; margin-top: 10px" onClick="App.payME(); return false;">Call</button>
+                </div>
+              </div>
+              <div id="transaction-successful1" style="display:none">
+                <img id="transaction-successful_icon" src="successful-transaction.png">
+              </div>
+              <div id="transaction-successful2" style="display:none">
+                <p style="color:white; font-family:arial"> Transaction successful </p>
+              </div>
+              <div id="transaction-failed1" style="display:none">
+                <img id="transaction-failed_icon" src="transaction-failed.png">
+              </div>
+              <div id="transaction-failed2" style="display:none">
+                <p style="color:white; font-family:arial"> Transaction Failed! </p>
+              </div>
+              <div>
+                <img id="wrong_value1" style="display:none; visibility:hidden" src="transaction-failed.png">
+              </div>
+              <div>
+                <p id="wrong_value2" style="color:white; font-family:arial; display:none"> You have inserted a wrong value! Please try again ... </p>
+              </div>
+              <div id="no_account1" style="display:none">
+                <img id="warn_no_account" src="warning.png">
+              </div>
+              <div id="no_account2" style="display:none">
+                <p style="color:white; font-family:arial"> No account deteceted! please checkout your browser MetaMask extension and make sure we have access to it. </p>
+              </div>
+              <div id="chequebook_error1" style="display:none">
+                <img id="chequebook_error_icon" src="transaction-failed.png">
+              </div>
+              <div id="chequebook_error2" style="display:none">
+                <p style="color:white; font-family:arial"> In order to request a new cheque book, your available cheque book pages must be totally used!</p>
+              </div>
+              <div id="dueDate_error1" style="display:none">
+                <img id="dueDate_error_icon" src="transaction-failed.png">
+              </div>
+              <div id="dueDate_error2" style="display:none">
+                <p style="color:white; font-family:arial"> Format of given 'Due Date' is not correct! you must provide it like: '2020/01/01' </p>
+              </div>
+              <div id="empty_field1" style="display:none">
+                <img id="empty_field_icon" src="transaction-failed.png">
+              </div>
+              <div id="empty_field2" style="display:none">
+                <p style="color:white; font-family:arial"> All fields must be filled! </p>
+              </div>
+              <div id="wrong_chequebook1" style="display:none">
+                <img id="wrong_chequebook_icon" src="transaction-failed.png">
+              </div>
+              <div id="wrong_chequebook2" style="display:none">
+                <p style="color:white; font-family:arial"> You have not any valid cheque book! Request a new one </p>
+              </div>
+              <div id="low_balance1" style="display:none">
+                <img id="low_balance_icon" src="transaction-failed.png">
+              </div>
+              <div id="low_balance2" style="display:none">
+                <p style="color:white; font-family:arial"> Amount you've entered is lower than your account balance! </p>
+              </div>
+              <div id="call_error1" style="display:none">
+                <img id="call_error_icon" src="transaction-failed.png">
+              </div>
+              <div id="call_error2" style="display:none">
+                <p style="color:white; font-family:arial"> There's no 'NOT PASSED' cheque with the given ID! </p>
+              </div>
+              <div id="not_hex1" style="display:none">
+                <img id="not_hex_icon" src="transaction-failed.png">
+              </div>
+              <div id="not_hex2" style="display:none">
+                <p style="color:white; font-family:arial"> Address field must be in hex format and starts with '0x' or '0X'!</p>
+              </div>
+              <div id="self_error1" style="display:none">
+                <img id="self_error_icon" src="transaction-failed.png">
+              </div>
+              <div id="self_error2" style="display:none">
+                <p style="color:white; font-family:arial"> You can't issue a cheque for yourself! </p>
+              </div>
+            </div>
+          </div>  
+        <div class="grid4-item1">
+          <div style="margin-left:45%">
+            <button type="radio" onClick="showChequesSection();"></button>
+            <button type="radio" onClick="showChequebooksSection();"></button>
+            <button type="radio" onClick="showIssueSection();"></button>
+          </div>
+          <hr/>
+          <div id="chequebooksSection" style="display:none">
+            <div style="background-color:#31708f; border: 2px solid #31708f; color:white; text-shadow: 1px 1px 2px #000000">
+              <h3 style="margin-left: 5px"> YOUR CHEQUEBOOKS DETAILS </h3>
+            </div>
+            <div style="overflow:scroll; height:300px">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" style="text-align:center">#</th>
+                  <th scope="col" style="text-align:center">Chequebook Serial Number</th>
+                  <th scope="col" style="text-align:center">Remaining Number of Pages</th>
+                  <th scope="col" style="text-align:center">Issuance Date</th>
+                  <th scope="col" style="text-align:center">Valid</th>
+                </tr>
+              </thead>
+              <tbody id="chequebooks">
+              </tbody>
+            </table>
+            </div>
+            <button type="submit" class="btn btn-primary" onClick="App.chequebookRequest(); return false;" style="margin-top: 35px; margin-left: 350px">Request New Chequebook</button>
+          </div>
+          <div id="chequesSection" style="display:block">
+            <div style="background-color:#31708f; border: 2px solid #31708f; color:white; text-shadow: 1px 1px 2px #000000">
+              <h3 style="margin-left: 5px"> YOUR ISSUED CHEQUES DETAILS </h3>
+            </div>
+            <div style="overflow:scroll; height:300px">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" style="text-align:center">#</th>
+                  <th scope="col" style="text-align:center">Cheque ID</th>
+                  <th scope="col" style="text-align:center">Chequebook Serial Number</th>
+                  <th scope="col" style="text-align:center">To</th>
+                  <th scope="col" style="text-align:center">Amount</th>
+                  <th scope="col" style="text-align:center">Issuance Date</th>
+                  <th scope="col" style="text-align:center">Due Date</th>
+                  <th scope="col" style="text-align:center">Status</th>
+                </tr>
+              </thead>
+              <tbody id="issuedCheques">
+              </tbody>
+            </table>
+          </div>
+            <hr/>
+            <div style="background-color:#31708f; border: 2px solid #31708f; color:white; text-shadow: 1px 1px 2px #000000">
+              <h3 style="margin-left: 5px"> YOUR RECIEVED CHEQUES DETAILS </h3>
+            </div>
+            <div style="overflow:scroll; height:300px">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" style="text-align:center">#</th>
+                  <th scope="col" style="text-align:center">ChequeID</th>
+                  <th scope="col" style="text-align:center">Chequebook Serial Number</th>
+                  <th scope="col" style="text-align:center">From</th>
+                  <th scope="col" style="text-align:center">Amount</th>
+                  <th scope="col" style="text-align:center">Issuance Date</th>
+                  <th scope="col" style="text-align:center">Due Date</th>
+                  <th scope="col" style="text-align:center">Status</th>
+                </tr>
+              </thead>
+              <tbody id="carryingCheques">
+              </tbody>
+            </table>
+          </div>
+          </div>
+          <div id="issueSection" style="display:none">
+            <div style="background-color:#31708f; border: 2px solid #31708f; color:white; text-shadow: 1px 1px 2px #000000">
+              <h3 style="margin-left: 5px"> ISSUE NEW CHEQUE </h3>
+            </div>
+          <div class="grid-container3">
+            <div class="grid3Item1">
+              <label for="input_recipientAddress" style="color:white; margin-left:5px">Recipient Address</label>
+		          </br>
+              <input id="input_recipientAddress" type="text" style="margin-left:5px"></input>
+              </br>
+		          </br>
+              <label for="input_amount" style="color:white; margin-left:5px">Amount</label>
+		          </br>
+              <input id="input_amount" type="text" style="margin-left:5px"></input>
+              </br>
+		          </br>
+              <label for="input_dueDate" style="color:white; margin-left:5px">Due Date</label>
+		          </br>
+              <input id="input_dueDate" type="text" value="Example: 2020/01/01" onClick="document.getElementById('input_dueDate').value = null;" style="margin-left:5px"></input>
+              <br/><br/>
+              <button type="submit" class="btn btn-primary" style="margin-left:35%;" onClick="App.issueCheque(); return false;">Submit</button>
+            </div>
+            <div class="grid3Item2">
+              <img src="/check1.jpg">
+            </div>
+            </div>
+            </div>
+          <br/><br/>
+        </div>
+        </div>
+        <div class="grid-container">
+          <div id="yourCheques" class="item1" style="opacity:100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              Your Cheques
+          </div>
+          <div id="yourChequebooks" class="item2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              Your Chequebooks
+          </div>
+          <div id="issueCheque" class="item3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              Issue Cheque
+          </div>
+        </div>
+        </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/web3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
